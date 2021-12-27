@@ -83,7 +83,7 @@
   border: 1px solid;
   
   line-height: 20vw;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: bold;
   /*color: var(--text-color);*/
   animation: colorChange var(--color-animation-duration) infinite linear;
