@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="" />
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="rs_logo.png" />
+    <title>Roquefort Softwares - Tentons une approche différente</title>
+
+    <!-- Styles et fonts -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="rswcl_samples/rs_cube.css" />
+    <link rel="stylesheet" type="text/css" href="rswcl_samples/rs_cursor_input.css" />
+    <link rel="stylesheet" type="text/css" href="rswcl_samples/rs_dialog.css" />
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="rswcl_samples/rs_wcl.js"></script>
+    <script type="text/javascript" src="rswcl_samples/rs_cube.js"></script>
+    <script type="text/javascript" src="rswcl_samples/rs_cursor_input.js"></script>
+    <script type="text/javascript" src="rswcl_samples/rs_dialog.js"></script>
+
+    <script type="text/javascript">
+      MainController.init();
+    </script>
+  </head>
+
+  <!-- Corps de la page -->
+  <body onload="MainController.postLoadInit()">
+    <div class="site_container">
+      <div class="fond"></div>
+
+      <!-- Panneau 1: Bannière -->
+      <div class="panel" id="panel_1">
+        <div class="banner side-container right">
+          <div class="img-logo"></div>
+          <div class="panel-title">Roquefort Softwares</div>
+          <div class="panel-text">Tentons une approche différente</div>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <div class="menu">
+        <a href="#panel_1" class="menu-item">Accueil</a>
+        <a href="#panel_2" class="menu-item">Présentation</a>
+        <a href="#panel_5" class="menu-item">Exemples de réalisations</a>
+      </div>
+
+      <!-- Panneau 2: Présentation -->
+      <div class="panel" id="panel_2">
+        <div class="flex-container row reveal fade-left">
+          <div class="side-container">
+            <div class="flex-container column">
+              <div class="panel-title">Présentation</div>
+              <div class="panel-text">
+                <p>Nous louons notre expertise et notre savoir-faire afin de vous apporter des solutions, à travers des approches parfois atypiques.</p>
+                <p>Spécialisés dans le développement Web, nous disposons par ailleurs d'un large panel de compétences :</p>
+                <ul>
+                  <li>Bases de données</li>
+                  <li>Langage SQL</li>
+                  <li>Analyse UML et Merise</li>
+                  <li>Systèmes Linux</li>
+                  <li>Réseaux informatiques</li>
+                </ul> 
+              </div>
+            </div>
+          </div>
+          <div class="side-container">
+            <center>
+              <div class="img-question"></div>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau 3: Expertise -->
+      <div class="panel" id="panel_3">
+        <div class="flex-container row reveal fade-right">
+          <div class="side-container">
+            <center>
+              <div class="img-meca"></div>
+            </center>
+          </div>
+          <div class="side-container">
+            <div class="flex-container column">
+              <div class="panel-title">Un savoir-faire unique</div>
+              <div class="panel-text">
+                <p>Forts d'une longue expérience dans la résolution de problèmes "insollubles", que vous bloquiez sur une problématique dans l'un de vos projets de développement informatique, ou que vous ayez besoin d'un système d'informations personnalisé pour votre structure, nous saurons trouver la solution la plus adaptée à votre budget et à vos besoins.</p>
+                <br />
+                <center>
+                  <a class="button" href="#panel_5">Voir des exemples</a>
+                </center>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau 4: Le contact client -->
+      <div class="panel" id="panel_4">
+        <div class="flex-container row reveal fade-left">
+          <div class="side-container">
+            <div class="flex-container column">
+              <div class="panel-title">Notre service d'accompagnement</div>
+              <div class="panel-text">
+                <p>Répondre à vos besoins est et sera toujours notre priorité. C'est pourquoi, dans le cadre de nos prestations de services, nous vous proposons un accompagnement complet :</p>
+                <ul>
+                  <li>Nous rédigeons avec vous le cahier des charges et les spécifications fonctionnelles</li>
+                  <li>Des états d'avancement réguliers pour un suivi optimal</li>
+                  <li>Des conseils adaptés à votre structure et au contexte</li>
+                  <li>Transfert de compétences en fin de mission</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="side-container">
+            <center>
+              <div class="img-rdv"></div>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exemples de réalisations -->
+      <!-- Panneau 5: La RS WCL -->
+      <div class="panel" id="panel_5">
+        <div class="flex-container column reveal fade-bottom">
+          <div class="panel-title">La RS WCL</div>
+          <p>La RS WCL (Roquefort Softwares' Web Components Library) et une bibliothèque de composants Web, dont vous pouvez observer quelques exemples ci-dessous.</p>
+
+          <!-- Le cube animé -->
+          <div class="flex-container row reveal fade-bottom">
+            <div class="side-container">
+              <p>Le composant &lt;rs-cube&gt;&lt;/rs-cube&gt; permet d'afficher un cube animé présentant séquentiellement ses faces dans un ordre définit en paramètre.</p>
+            </div>
+            <div class="side-container">
+              <rs-cube rs-timer="1250" rs-sequence="['front', 'rear', 'top', 'left', 'right', 'bottom']">
+                <rs-content side="front">Voici un</rs-content>
+                <rs-content side="rear">petit</rs-content>
+                <rs-content side="top">exemple</rs-content>
+                <rs-content side="left">de composant</rs-content>
+                <rs-content side="right">utilisant</rs-content>
+                <rs-content side="bottom">la 3D</rs-content>
+              </rs-cube>
+            </div>
+          </div>
+
+          <!-- Le curseur coloré -->
+          <div class="flex-container row reveal fade-bottom">
+            <div class="side-container">
+              <p>Le composant &lt;rs-cursor-input&gt;&lt;/rs-cursor-input&gt; est un champ de type curseur. Il est composé d'un curseur au fond dégradé paramétrable, d'un libellé ainsi que d'un champ de saisie directe pour la valeur.</p>
+              <p>Valeur du curseur : <span id="cursor_value"></span></p>
+            </div>
+            <div class="side-container">
+              <rs-cursor-input titre="Curseur"
+                     txt-unit="%"
+                     step="0.25"
+                     min-value="1"
+                     max-value="3"
+                     min-color="green"
+                     mid-color="yellow"
+                     max-color="red"
+                     rs-model="scope.cursor_value">
+              </rs-cursor-input>
+              <rs-cursor-input titre="Lecture seule"
+                     txt-unit=""
+                     step="1"
+                     min-value="0"
+                     max-value="3000"
+                     min-color="white"
+                     mid-color="blue"
+                     max-color="black"
+                     rs-model="scope.readonly_cursor_value"
+                     rs-readonly="true">
+              </rs-cursor-input>
+            </div>
+          </div>
+
+          <!-- Les boîtes de dialogue -->
+          <div class="flex-container row reveal fade-bottom">
+            <div class="side-container">
+              <p>Le composant &lt;rs-dialog&gt;&lt;/rs-dialog&gt; permet d'afficher des boîtes de dialogues.</p>
+              <p>Le script du composant déclare également des fonctions générant automatiquement des boîtes de dialogue pré-formatées :</p>
+              <ul>
+                <li>Message d'avertissement</li>
+                <li>Question à deux réponses</li>
+              </ul>
+            </div>
+            <div class="side-container">
+              <button onclick="RS_Alert(`<p>Merci d'avoir cliqué sur ce bouton : il me grattait un peu.</p>`, 
+                                        'Clic sur le bouton', 'Avec plaisir')">Ouvrir une boîte de dialogue</button>
+            </div>
+          </div>
+        </div>
+        <br />
+        <center><a class="button" href="https://github.com/thedwarf21/RS_WCL" target="_blank">Voir le projet sur GitHub</a></center>
+        <br />
+      </div>
+
+      <!-- Panneau 6: Asteroids Harvest-->
+      <div class="panel" id="panel_5">
+        <div class="flex-container column reveal fade-bottom">
+          <div class="panel-title">Le jeu Asteroids Harvest</div>
+          <div class="panel-text">
+            <p>Asteroids Harvest est un jeu HTML5 open source développé from scratch par nos soins.</p>
+            <p>Le code source est accessible publiquement sur la plateforme GitHub.</p>
+            <br />
+            <div class="flex-container row">
+              <a class="button" href="https://thedwarf21.github.io/AsteroidsHarvest" target="_blank">Voir le jeu</a>
+              <a class="button" href="https://github.com/thedwarf21/AsteroidsHarvest" target="_blank">Voir le projet sur GitHub</a>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <!-- Pied de page -->
+      <div class="panel footer">
+        <div class="flex-container row">
+          <div class="footer-item">
+            <b>Téléphone</b>
+            06 47 96 74 50
+          </div>
+          <div class="footer-item">
+            <b>Adresse mail</b>
+            francois.roquefort@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

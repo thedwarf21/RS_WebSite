@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Licorice";
+  src: url("Licorice/Licorice-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("Roboto_Slab/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+.fond {
+    background: url('code.png') no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    filter: blur(2px);
+    width: 100%;
+    height: 100vh;
+    margin-bottom: -100vh;
+    position: sticky;
+    top: 0px;
+    z-index: -1;
+}
+
+/** Le menu **/
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background: linear-gradient(to bottom, #333, #555 60%, #666);
+	height: 5vw;
+	position: sticky;
+	top: 10px;
+	z-index: 1;
+}
+.menu-item {
+	color: white;
+	text-decoration: none;
+	font-family: courrier;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2.5vw;
+}
+
+/** Les liens boutons **/
+a.button {
+	color: white;
+	text-decoration: none;
+	padding: 15px;
+	background: linear-gradient(to bottom, #6a2d00, #a24400 60%,#ff6c00);
+	box-shadow: 2px 2px 3px rgb(0 0 0 / 80%);
+	border-radius: 5px;
+	border: none;
+}
+a.button:active {
+	box-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
+	transform: translate(1px, 1px);
+}
+a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff852b); }
+
+/** Les panneaux en eux-mêmes **/
+.panel { padding: 20px; }
+.panel:nth-child(2n + 1) {
+	background-color: #FFFEEE;
+	color: #06619a;
+}
+.panel:nth-child(2n) {
+	background-color: #06619A;
+	color: #cee1ee;
+}
+#panel_1 { 
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+	height: 44vw;
+}
+.panel.footer { 
+	height: 150px;
+	background: linear-gradient(to bottom, #283c57, #556988 60%, #a1badb);
+}
+
+/** Conteneurs pour mise en page dans les panneaux **/
+.side-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 46%;
+}
+.side-container.right { margin-left: 52%; }
+.flex-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.flex-container.row { flex-direction: row; }
+.flex-container.column { flex-direction: column; }
+
+/** Style de mise en forme par défaut, dans les panneaux **/
+.panel-title {
+	font-family: Licorice;
+	font-size: 8vw;
+	text-align: center;
+	line-height: 0.75em;
+	margin-top: 3vw;
+}
+.panel-text, #panel_5 p, #panel_5 li, center a.button {
+	font-family: RobotoSlab;
+	font-size: 2vw;
+	text-align: justify;
+	line-height: 1.75em;
+}
+.panel-text p, #panel_5 p, #panel_5 li { text-indent: 5%; }
+li { list-style-type: disclosure-closed; }
+
+/** Contenu du panneau 1 (Bannière du site) **/
+.side-container.banner { 
+	color: #cee1ee;
+	text-shadow: 0px 0px 5px rgb(255, 255, 255); 
+}
+.img-logo {
+	background: url('rs_logo.png');
+	background-size: contain;
+	height: 24vw;
+	width: 35vw;
+	aspect-ratio: 215 / 310;
+	margin-top: 5vw;
+}
+#panel_1 .panel-title {
+    font-family: Monospace;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: left;
+}
+#panel_1 .panel-text {
+    font-family: Monospace;
+    font-size: 1.75vw;
+    font-style: italic;
+}
+
+
+/** Contenu du panneau 2 **/
+.img-question {
+	background: url('question.jpg');
+	box-shadow: inset 3px 3px 5px rgba(0,0,0,0.8);
+	background-size: contain;
+	height: 35vw;
+	width: 35vw;
+	aspect-ratio: 1 / 1;
+}
+/** Contenu du panneau 3 **/
+.img-meca {
+	background: url('mecanisme.jpg');
+	box-shadow: inset 3px 3px 5px rgba(0,0,0,0.8);
+	background-size: contain;
+	width: 35vw;
+	aspect-ratio: 275 / 183;
+}
+/** Contenu du panneau 4 **/
+.img-rdv {
+	background: url('rdv.jpg');
+	box-shadow: inset 3px 3px 5px rgba(0,0,0,0.8);
+	background-size: contain;
+	width: 35vw;
+	aspect-ratio: 3 / 2;
+}
+/** Contenu du panneau 5 **/
+button {
+    width: 40%;
+    margin-left: 30%;
+    height: 6vw;
+    font-size: 1.5vw;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/** Animations d'apparition du contenu des panneaux **/
+.reveal { opacity: 0; }
+.reveal.active { opacity: 1; }
+.active.fade-left { animation: fade-left 0.5s ease-in-out; }
+.active.fade-right { animation: fade-right 0.5s ease-in-out; }
+.active.fade-bottom { animation: fade-bottom 0.5s ease-in-out; }
+@keyframes fade-right {
+	0% {
+		transform: translateX(25vw);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes fade-left {
+	0% {
+		transform: translateX(-25vw);
+		opacity: 0;
+	} 
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes fade-bottom {
+	0% {
+		transform: translateY(25vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/*** Pied de page ***/
+.footer-item {
+	color: #191e22;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: calc(100% + 40px);
+	width: 50%;
+	border-left: 1px solid black;
+font-size: 2.5vw;
+}
+.footer-item:first-child { border: none; }
