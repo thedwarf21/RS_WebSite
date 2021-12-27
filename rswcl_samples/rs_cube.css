@@ -1,0 +1,105 @@
+/***** Vue en cube *****/
+
+/*** Variables CSS ***/
+:root {
+  --rs-blue: #08609A;
+  --rs-green: #079607;
+  --rs-red: #E62A00;
+  --scene-bg: radial-gradient(circle at bottom right, #E62A00 12%, #079607 40%, #08609A);
+  --face-bg: rgba(255, 250, 190, 0.57);
+  --text-color: #08609A;
+  --color-animation-duration: 7.5s;
+}
+
+/* Animation couleur */
+@keyframes colorChange {
+  0% {
+    color: var(--rs-red);
+    border-color: var(--rs-red);
+  }
+  15% {
+    color: var(--rs-blue);
+    border-color: var(--rs-blue);
+  }
+  60% {
+    color: var(--rs-green);
+    border-color: var(--rs-green);
+  }
+  100% {
+    color: var(--rs-red);
+    border-color: var(--rs-red);
+  }
+}
+
+.rs-scene {
+  /* Gestion de la vue 3D */
+  perspective: 400px;
+  perspective-origin: 50% 50%;
+
+  /* Faire déborder la couleur de fond en haut et en bas */
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+
+  /* Marges lattérales pour center */
+  margin-left: calc(50% - 15vw);
+  margin-right: calc(50% - 15vw);
+
+  /* Ombre et marges qui en découlent */
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  box-shadow: 0px 0px 5px black;
+
+  /* Fond coloré : dégradé radial dont l'épicentre est le coin inférieur droit */
+  background: var(--scene-bg);
+}
+
+.rs-cube {
+  position: relative;
+  height: 20vw;
+  width: 20vw;
+  transform-style: preserve-3d;
+  transform: translateZ(-10vw);
+  left: calc(50% - 10vw);
+
+  transition: 1s transform ease-in-out;
+  -ms-transition: 1s transform ease-in-out;
+  -webkit-transition: 1s transform ease-in-out;
+}
+
+/** Animation auto du cube */
+.rs-cube.spinning { animation: spinCube 4s infinite linear; }
+@keyframes spinCube {
+    0% { transform: translateZ(-10vw) rotateX(  0deg) rotateY(  0deg); }
+  100% { transform: translateZ(-10vw) rotateX(360deg) rotateY(360deg); }
+}
+
+/*** Faces du cube ***/
+.rs-face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  
+  background: var(--face-bg);
+  border: 1px solid;
+  
+  line-height: 20vw;
+  font-size: 3vw;
+  font-weight: bold;
+  /*color: var(--text-color);*/
+  animation: colorChange var(--color-animation-duration) infinite linear;
+  text-align: center;
+}
+.rs-face.front { transform: translateZ(10vw); }
+.rs-face.rear { transform: rotateY(180deg) translateZ(10vw); }
+.rs-face.left { transform: rotateY(-90deg) translateZ(10vw); }
+.rs-face.right { transform: rotateY(90deg) translateZ(10vw); }
+.rs-face.top { transform: rotateX(90deg) translateZ(10vw); }
+.rs-face.bottom { transform: rotateX(-90deg) translateZ(10vw); }
+
+/*** Orientations du cube ***/
+.rs-cube.front { transform: translateZ(-10vw) rotateY(0deg); }
+.rs-cube.rear { transform: translateZ(-10vw) rotateY(180deg); }
+.rs-cube.left { transform: translateZ(-10vw) rotateY(90deg); }
+.rs-cube.right { transform: translateZ(-10vw) rotateY(-90deg); }
+.rs-cube.top { transform: translateZ(-10vw) rotateX(-90deg); }
+.rs-cube.bottom { transform: translateZ(-10vw) rotateX(90deg); }
