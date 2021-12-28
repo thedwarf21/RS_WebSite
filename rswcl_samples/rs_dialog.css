@@ -86,7 +86,7 @@
   
   position: relative;
   width: 100%;
-  height: calc(100% - 35px);
+  height: calc(100% - 4vw);
   overflow-y: auto;
 }
 
