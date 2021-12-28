@@ -81,7 +81,7 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 	height: 44vw;
 }
 .panel.footer { 
-	height: 150px;
+	height: 15vw;
 	background: linear-gradient(to bottom, #283c57, #556988 60%, #a1badb);
 }
 
