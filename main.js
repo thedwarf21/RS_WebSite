@@ -49,5 +49,8 @@ class MainController {
             object: document.currentController.scope,
             property: "cursor_value"
         }).addBinding(document.getElementById("cursor_value"), "innerHTML");
+        
+        // Sur appareil mobile en format portrait, les premiers panneaux sont visibles immédiatement
+        reveal();
     }
 }
