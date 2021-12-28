@@ -1,10 +1,7 @@
 /**
  * - !!!! Le faire full responsive (==> au fur et à mesure)
  * 
- * - Choisir et mettre en place les visuels sur chacun des panneaux :
- *          présentation => un bonhomme avec des ? au dessus de la tête
- *          savoir-faire => mécanisme complexe
- *          accompagnement => photo de moi discutant boulot avec une autre personne
+ * - SEO
  * - Poster sur LinkedIn
  */
 
