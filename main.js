@@ -7,7 +7,7 @@
 
 
 /***** Mise en place de l'animation d'apparition des sections *****/
-const REVEAL_DELTA = 150;
+const REVEAL_DELTA_VW = 0.1;
 
 /**
  * Parcourre les elements portant la classe "reveal" afin d'ajouter/supprimer la classe active, si nécessaire 
@@ -17,7 +17,7 @@ function reveal() {
     let revealElements = document.querySelectorAll(".reveal");
     for (let element of revealElements) {
         let elementTop = element.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - REVEAL_DELTA)
+        if (elementTop < window.innerHeight - (window.innerWidth * REVEAL_DELTA_VW))
             element.classList.add("active");
         else element.classList.remove("active");
     }
@@ -49,8 +49,8 @@ class MainController {
             object: document.currentController.scope,
             property: "cursor_value"
         }).addBinding(document.getElementById("cursor_value"), "innerHTML");
-        
-        // Sur appareil mobile en format portrait, les premiers panneaux sont visibles immédiatement
+
+        // Sur appareil mobile en format portrait, les premiers panneaux sont visibles dès le départ
         reveal();
     }
 }
