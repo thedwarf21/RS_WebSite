@@ -24,13 +24,13 @@
   width: 80vw;
   max-height: 80vh;
 
-  transition-property: width transform;
+  transition-property: width transform opacity;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  -ms-transition-property: width transform;
+  -ms-transition-property: width transform opacity;
   -ms-transition-duration: 0.5s;
   -ms-transition-timing-function: ease-in-out;
-  -webkit-transition-property: width transform;
+  -webkit-transition-property: width transform opacity;
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in-out;
 
@@ -40,6 +40,7 @@
 .rs-closed {
   transform: translateY(calc(50vh + 50%));
   width: 10vw;
+  opacity: 0;
 }
 
 /*** Titre de la fenêtre ***/
