@@ -9,8 +9,9 @@
 }
 
 html { scroll-behavior: smooth; }
-body { 
+body {
 	margin: 0;
+	overflow-x: hidden;
 	-moz-user-select: none;		/* Firefox */
 	-webkit-user-select: none;	/* Chrome, Safari, Opéra depuis la version 15 */
 	-ms-user-select: none;		/* Internet explorer depuis la version 10 et Edge */
@@ -36,7 +37,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	background: linear-gradient(to bottom, #333, #555 60%, #666);
-	height: 5vw;
+	height: 3vw;
 	position: sticky;
 	top: 10px;
 	z-index: 1;
@@ -47,7 +48,7 @@ body {
 	font-family: courrier;
 	font-style: italic;
 	font-weight: bold;
-	font-size: 2.5vw;
+	font-size: 1.75vw;
 }
 
 /** Les liens boutons **/
@@ -81,7 +82,7 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 	height: 44vw;
 }
 .panel.footer { 
-	height: 15vw;
+	height: 8vw;
 	background: linear-gradient(to bottom, #283c57, #556988 60%, #a1badb);
 }
 
@@ -94,7 +95,7 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 	margin-right: 2%;
 	width: 46%;
 }
-.side-container.right { margin-left: 52%; }
+.side-container.right { margin-left: 58%; }
 .flex-container {
 	width: 100%;
 	height: 100%;
@@ -108,14 +109,14 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 /** Style de mise en forme par défaut, dans les panneaux **/
 .panel-title {
 	font-family: Licorice;
-	font-size: 8vw;
+	font-size: 4vw;
 	text-align: center;
 	line-height: 0.75em;
 	margin-top: 3vw;
 }
 .panel-text, #panel_5 p, #panel_5 li, center a.button {
 	font-family: RobotoSlab;
-	font-size: 2vw;
+	font-size: 1.1vw;
 	text-align: justify;
 	line-height: 1.75em;
 }
@@ -133,20 +134,20 @@ li { list-style: inside disclosure-closed; }
 .img-logo {
 	background: url('rs_logo.png');
 	background-size: contain;
-	height: 24vw;
-	width: 35vw;
+	height: 20vw;
+	width: 29vw;
 	aspect-ratio: 215 / 310;
-	margin-top: 5vw;
+	margin-top: 9vw;
 }
 #panel_1 .panel-title {
     font-family: Monospace;
-    font-size: 3vw;
+	font-size: 2.5vw;
     font-weight: bold;
     text-align: left;
 }
 #panel_1 .panel-text {
     font-family: Monospace;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     font-style: italic;
 }
 
@@ -186,7 +187,7 @@ button {
     width: 40%;
     margin-left: 30%;
     height: 6vw;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     border: none;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
     border-radius: 5px;
@@ -246,5 +247,23 @@ button {
 	width: 50%;
 	border-left: 1px solid rgba(0,0,0,0.8);
 	border-right: 1px solid rgba(0,0,0,0.8);
-	font-size: 2.5vw;
+	font-size: 1.8vw;
+}
+
+/*** Tailles de font adaptées au format portrait (par défaut = paysage) ***/
+@media screen and (orientation: portrait) {
+	.img-logo {
+		height: 24vw;
+		width: 35vw;
+		margin-top: 5vw;
+	}
+	.side-container.right { margin-left: 52%; }
+	#panel_1 .panel-title { font-size: 3vw; }
+	#panel_1 .panel-text { font-size: 1.75vw; }
+	.menu { height: 5vw; }
+	.menu-item { font-size: 2.5vw; }
+	.panel-title { font-size: 8vw; }
+	.panel-text, #panel_5 p, #panel_5 li, center a.button { font-size: 2vw; }
+	.panel.footer { height: 15vw; }
+	.footer-item { font-size: 2.5vw; }
 }
