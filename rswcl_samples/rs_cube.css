@@ -47,7 +47,7 @@
   /* Ombre et marges qui en découlent */
   margin-top: 1vw;
   margin-bottom: 1vw;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: inset 3px 3px 5px rgb(0 0 0 / 70%);
 
   /* Fond coloré : dégradé radial dont l'épicentre est le coin inférieur droit */
   background: var(--scene-bg);
