@@ -80,6 +80,7 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 #panel_1 { 
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
 	height: 44vw;
+	margin-bottom: -3vw; /* Evite d'avoir un trou à la place du menu, lors du défilement vers le bas */
 }
 .panel.footer { 
 	height: 8vw;
