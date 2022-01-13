@@ -37,6 +37,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	background: linear-gradient(to bottom, #333, #555 60%, #666);
+	box-shadow: 0px 6px 6px rgb(0 0 0 / 60%);
 	height: 3vw;
 	position: sticky;
 	top: 10px;
