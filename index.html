@@ -43,7 +43,7 @@
   <body onload="MainController.postLoadInit()">
     <div class="site_container">
       <div class="fond"></div>
-
+      
       <!-- Panneau 1: Bannière -->
       <div class="panel" id="panel_1">
         <header>
@@ -165,6 +165,19 @@
               <div class="flex-container row reveal fade-bottom">
                 <div class="side-container">
                   <p>Le composant &lt;rs-cube&gt;&lt;/rs-cube&gt; permet d'afficher un cube animé présentant séquentiellement ses faces dans un ordre défini en paramètres.</p>
+                  <p>Comme l'illustre le code HTML ci-dessous, correspondant à ce cube animé, ce composant est très simple d'utilisation.</p>
+                  <span class="textarea-container">
+                    <textarea readonly>
+<rs-cube rs-timer="1250" rs-sequence="['front', 'rear', 'top', 'left', 'right', 'bottom']">
+    <rs-content side="front">Voici un</rs-content>
+    <rs-content side="rear">petit</rs-content>
+    <rs-content side="top">exemple</rs-content>
+    <rs-content side="left">de composant</rs-content>
+    <rs-content side="right">utilisant</rs-content>
+    <rs-content side="bottom">la 3D</rs-content>
+</rs-cube>
+                    </textarea>
+                  </span>
                 </div>
                 <div class="side-container">
                   <rs-cube rs-timer="1250" rs-sequence="['front', 'rear', 'top', 'left', 'right', 'bottom']">
