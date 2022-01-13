@@ -85,7 +85,8 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 }
 .panel.footer { 
 	height: 8vw;
-	background: linear-gradient(to bottom, #283c57, #556988 60%, #a1badb);
+	background: linear-gradient(to bottom, #334c6c, #7089af 60%, #a1badb);
+	box-shadow: inset 0px 6px 6px rgb(0 0 0 / 40%);
 }
 
 /** Conteneurs pour mise en page dans les panneaux **/
