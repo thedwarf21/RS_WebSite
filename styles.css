@@ -137,10 +137,10 @@ li { list-style: inside disclosure-closed; }
 .img-logo {
 	background: url('rs_logo.png');
 	background-size: contain;
-	height: 20vw;
-	width: 29vw;
-	aspect-ratio: 215 / 310;
-	margin-top: 9vw;
+	height: 28.5vw;
+	width: 28.5vw;
+	aspect-ratio: 1;
+	margin-top: 3vw;
 }
 #panel_1 .panel-title {
     font-family: Monospace;
