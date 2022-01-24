@@ -269,9 +269,9 @@ textarea {
 /*** Tailles de font adaptées au format portrait (par défaut = paysage) ***/
 @media screen and (orientation: portrait) {
 	.img-logo {
-		height: 24vw;
+		height: 35vw;
 		width: 35vw;
-		margin-top: 5vw;
+		margin-top: -1vw;
 	}
 	.side-container.right { margin-left: 52%; }
 	#panel_1 .panel-title { font-size: 3vw; }
