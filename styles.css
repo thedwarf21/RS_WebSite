@@ -117,13 +117,13 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 	line-height: 0.75em;
 	margin-top: 3vw;
 }
-.panel-text, #panel_5 p, #panel_5 li, center a.button {
+.panel-text, p, li, center a.button {
 	font-family: RobotoSlab;
 	font-size: 1.1vw;
 	text-align: justify;
 	line-height: 1.75em;
 }
-.panel-text p, #panel_5 p, #panel_5 li { text-indent: 5%; }
+p, li { text-indent: 5%; }
 li { list-style: inside disclosure-closed; }
 
 
@@ -290,7 +290,7 @@ textarea {
 	.menu { height: 5vw; }
 	.menu-item { font-size: 2.5vw; }
 	.panel-title { font-size: 8vw; }
-	.panel-text, #panel_5 p, #panel_5 li, center a.button { font-size: 2vw; }
+	.panel-text, p, li, center a.button { font-size: 2vw; }
 	.panel.footer { height: 15vw; }
 	.footer-item { font-size: 2.5vw; }
 }
