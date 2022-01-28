@@ -308,7 +308,6 @@ class RSWCLCursorInput extends HTMLElement {
       eval(this.getAttribute("onchange"));
     };
     RS_WCL.styleShadow(shadow, 'rswcl_samples/rs_cursor_input.css');
-    RS_WCL.styleShadow(shadow, 'rswcl_samples/theme.css');
     shadow.appendChild(new RS_CursorInput(id, title, value, step, minParams, maxParams, midColor, rs_model, onchange, readonly, txtUnite));
   }
 }
