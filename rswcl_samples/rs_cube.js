@@ -167,7 +167,6 @@ class RSWCLCube extends HTMLBaseElement {
     // Génération du shadow DOM
     let shadow = this.attachShadow({ mode: SHADOW_MODE });
     RS_WCL.styleShadow(shadow, 'rswcl_samples/rs_cube.css');
-    RS_WCL.styleShadow(shadow, 'rswcl_samples/theme.css');
     shadow.appendChild(new RS_Cube(contents, tempo, sequence));
   }
 }
