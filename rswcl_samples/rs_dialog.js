@@ -133,7 +133,6 @@ class RSWCLDialog extends HTMLElement {
     let classes = this.getAttribute("class");
     let classList = classes ? classes.split(" ") : [];
     RS_WCL.styleShadow(shadow, 'rswcl_samples/rs_dialog.css');
-    RS_WCL.styleShadow(shadow, 'rswcl_samples/theme.css');
     let popup = new RS_Dialog(id, title, bgClassList, containerClassList, classList, true);
     popup.setContentInnerHTML(html_content);
     shadow.appendChild(popup);
