@@ -382,7 +382,7 @@ class RS_CursorInput extends HTMLDivElement {
     // Pour les évenements, on utilise un ()=> pour conserver un pointeur "this" sur notre composant
     let body = document.getElementsByTagName("BODY")[0];
     window.onmousemove = (event)=> { this.cursorDrag(event); };
-    window.onmouseup = (event) => { this.cursorDragEnd(event); };
+    window.onmouseup = (event) => { this.cursorDragEnd(event, rs_model, onchange); };
     body.style.cursor = "col-resize";
     this.cursorMousePosX = event.clientX;
 
@@ -421,7 +421,7 @@ class RS_CursorInput extends HTMLDivElement {
    ****************************************************************
    * @param | {Object} | event | L'événement déclencheur          *
    ****************************************************************/
-  cursorDragEnd(event) { 
+  cursorDragEnd(event, rs_model, onchange) { 
 
     // Retirons nos EventListeners et rétablissons le curseur par défaut
     window.onmousemove = null;
