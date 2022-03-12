@@ -48,7 +48,6 @@
 }
 
 .rs-cursor.readonly .rs-cursor-handle {
-  height: 20px;
   width: 1px;
   min-width: 0;
   left: 0;
