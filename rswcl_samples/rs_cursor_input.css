@@ -7,47 +7,60 @@
   margin-bottom: 10px;
 }
 
-.rs-cursor-ink {
+/* Génère une ombre suivant les formes du curseur */
+.rs-shadow-wrapper {
   width: calc(80% - 8vw);
+  filter: drop-shadow(0.3vw 0.3vw 0.2vw #000A);
+}
+
+.rs-cursor-ink {
   height: 2vw;
-  border-radius: 1vw;
+  width: calc(100% - 1vw);
+  
+  margin-left: 1vw;
   margin-top: 0.5vw;
-  margin-right: 3vw;
-  margin-left: 3vw;
-  box-shadow: inset 1px 1px 1px rgb(0 0 0 / 80%);
+  
+  border-radius: 1vw;
+  clip-path: polygon(0 25%, 0 75%, 100% 100%, 100% 0%);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .rs-cursor {
-  width: 3vw;
-  height: 3vw;
-  border: 1px solid #969696;
-  border-radius: 50%;
-  box-shadow: 2px 2px 2px rgb(0 0 0 / 80%);
+  height: 100%;
+  border-radius: 0 1vw 1vw 0;
+  background: linear-gradient(to right, #00000050, #00000080);
+}
+
+.rs-cursor-handle {
+  height: 100%;
+  width: 20px;
+  min-width: 20px;
+  
   position: relative;
-  cursor: pointer;
+  left: -10px;
 
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(left, #DCDCDC 0%, #DCDCDC 5%, #969696 20%, #DCDCDC 35%, #969696 50%, #DCDCDC 65%, #969696 80%, #DCDCDC 95%, #DCDCDC 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #DCDCDC 0%, #DCDCDC 5%, #969696 20%, #DCDCDC 35%, #969696 50%, #DCDCDC 65%, #969696 80%, #DCDCDC 95%, #DCDCDC 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #DCDCDC 0%, #DCDCDC 5%, #969696 20%, #DCDCDC 35%, #969696 50%, #DCDCDC 65%, #969696 80%, #DCDCDC 95%, #DCDCDC 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to right, transparent, #FF000060 40%, #FF0000 50%, #FF000060 60%, transparent);
+  cursor: col-resize;
+  color: transparent;
+}
 
-  transform: translateY(-0.7vw);
-  -ms-transform: translateY(-0.7vw);
-  -webkit-transform: translateY(-0.7vw);
+.rs-cursor.readonly .rs-cursor-handle {
+  height: 20px;
+  width: 1px;
+  min-width: 0;
+  left: 0;
+  
+  cursor: default;
+  background: black;
 }
-/* lors du clic le relief est diminué --> ombre réduite et translation d'autant vers le bas */
-.rs-cursor:active { 
-  box-shadow: 1px 1px 1px rgb(0 0 0 / 80%);
-  transform: translateY(-0.6vw);
-  -ms-transform: translateY(-0.6vw);
-  -webkit-transform: translateY(-0.6vw);
-}
-/* En lecture seule, le curseur est "lisse" */
-.rs-cursor.readonly { background: #969696; }
-/* En cas de dépassement d'une limite, le curseur devient rouge */
-.rs-cursor.error { 
-  background: #FF4422;
-  border-color: red;
+.rs-cursor.error .rs-cursor-handle { 
+  text-align: center;
+  color: red;
+  font-family: sans-serif;
+  font-size: 1.8vw;
 }
 
 .rs-cursor-title { 
@@ -69,7 +82,7 @@
   text-align: right;
 }
 .rs-cursor-input-field:focus {
-  box-shadow: 0 0 3px #cee1ee;
+  box-shadow: 0 0 3px #085388;
 }
 
 .rs-txt-unit {
@@ -84,3 +97,43 @@
   margin: 0;
 }
 .rs-cursor-input-field { -moz-appearance:textfield; }
+
+/*** Butées et valeurs associées ***/
+.rs-cursor-limits {
+  margin-top: 0.5vw;
+  margin-left: 2vw;
+  width: calc(100% - 3vw);
+  height: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rs-cursor-limits .vertical-bar {
+  height: 100%;
+  border: 1px solid;
+}
+
+.rs-cursor-limits.vals {
+  margin-top: 0.1vw;
+  margin-left: 1.8vw;
+  width: calc(100% - 2.6vw);
+}
+
+.rs-cursor-limits.vals .limit-val {
+  font-size: 1vw;
+  font-family: monospace;
+}
+
+/*** Affichage en mode reverse ***/
+.reverse .rs-cursor-ink {
+  justify-content: start;
+  clip-path: polygon(100% 25%, 100% 75%, 0 100%, 0 0);
+}
+.reverse .rs-cursor {
+  border-radius: 1vw 0 0 1vw;
+  background: linear-gradient(to right, #00000080, #00000050);
+  display: flex;
+  justify-content: end;
+}
+.reverse .rs-cursor-handle { left: 10px; }
