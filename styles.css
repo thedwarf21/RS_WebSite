@@ -192,8 +192,15 @@
 
 /* Barre de menu */
 @keyframes menuFadeIn {
-	0% { transform: rotateX(0.25turn); }
-	100% { transform: none; }
+	0% { 
+		opacity: 0.1;
+		transform: translateX(100vw) rotateX(1.5turn);
+	}
+	50% { opacity: 0.25; }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 /*** Déclaration des font-family 'Licorice' et 'RobotoSlab' ***/
