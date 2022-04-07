@@ -3,13 +3,13 @@
 @keyframes fadeInAnimation {
 	0% {
 		opacity: 0%;
-		transform: translateX(-70vw) rotate(-1turn) scale(0.5);
+		transform: translateX(-70vw) rotate(-1turn) scale(0.1);
 		border-radius: 50%;
 	}
-	80% {
+	60% {
 		opacity: 100%;
 		transform: none;
-		border-radius: 25%;
+		border-radius: 50%;
 	}
 	100% { border-radius: 0; }
 }
@@ -23,172 +23,172 @@
 
 /* Lettres de la phrase d'accroche */
 @keyframes char_1_animation {
-	0% { transform: translate(-56vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-56vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_1 { animation: char_1_animation 1.6s ease-in-out; }
+#lettre_1 { animation: char_1_animation 1.2s ease-in-out; }
 
 @keyframes char_2_animation {
-	0% { transform: translate(-52vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-52vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_2 { animation: char_2_animation 1.6s ease-in-out; }
+#lettre_2 { animation: char_2_animation 1.2s ease-in-out; }
 
 @keyframes char_3_animation {
-	0% { transform: translate(-48vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-48vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_3 { animation: char_3_animation 1.6s ease-in-out; }
+#lettre_3 { animation: char_3_animation 1.2s ease-in-out; }
 
 @keyframes char_4_animation {
-	0% { transform: translate(-44vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-44vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_4 { animation: char_4_animation 1.6s ease-in-out; }
+#lettre_4 { animation: char_4_animation 1.2s ease-in-out; }
 
 @keyframes char_5_animation {
-	0% { transform: translate(-40vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-40vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_5 { animation: char_5_animation 1.6s ease-in-out; }
+#lettre_5 { animation: char_5_animation 1.2s ease-in-out; }
 
 @keyframes char_6_animation {
-	0% { transform: translate(-36vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-36vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_6 { animation: char_6_animation 1.6s ease-in-out; }
+#lettre_6 { animation: char_6_animation 1.2s ease-in-out; }
 
 @keyframes char_7_animation {
-	0% { transform: translate(-32vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-32vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_7 { animation: char_7_animation 1.6s ease-in-out; }
+#lettre_7 { animation: char_7_animation 1.2s ease-in-out; }
 
 @keyframes char_8_animation {
-	0% { transform: translate(-28vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-28vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_8 { animation: char_8_animation 1.6s ease-in-out; }
+#lettre_8 { animation: char_8_animation 1.2s ease-in-out; }
 
 @keyframes char_9_animation {
-	0% { transform: translate(-24vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-24vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_9 { animation: char_9_animation 1.6s ease-in-out; }
+#lettre_9 { animation: char_9_animation 1.2s ease-in-out; }
 
 @keyframes char_10_animation {
-	0% { transform: translate(-20vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-20vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_10 { animation: char_10_animation 1.6s ease-in-out; }
+#lettre_10 { animation: char_10_animation 1.2s ease-in-out; }
 
 @keyframes char_11_animation {
-	0% { transform: translate(-16vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-16vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_11 { animation: char_11_animation 1.6s ease-in-out; }
+#lettre_11 { animation: char_11_animation 1.2s ease-in-out; }
 
 @keyframes char_12_animation {
-	0% { transform: translate(-12vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-12vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_12 { animation: char_12_animation 1.6s ease-in-out; }
+#lettre_12 { animation: char_12_animation 1.2s ease-in-out; }
 
 @keyframes char_13_animation {
-	0% { transform: translate(-8vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(-8vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_13 { animation: char_13_animation 1.6s ease-in-out; }
+#lettre_13 { animation: char_13_animation 1.2s ease-in-out; }
 
 @keyframes char_14_animation {
-	0% { transform: translate(-4vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(-4vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_14 { animation: char_14_animation 1.6s ease-in-out; }
+#lettre_14 { animation: char_14_animation 1.2s ease-in-out; }
 
 @keyframes char_15_animation {
-	0% { transform: translate(1vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(1vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_15 { animation: char_15_animation 1.6s ease-in-out; }
+#lettre_15 { animation: char_15_animation 1.2s ease-in-out; }
 
 @keyframes char_16_animation {
-	0% { transform: translate(2vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(2vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_16 { animation: char_16_animation 1.6s ease-in-out; }
+#lettre_16 { animation: char_16_animation 1.2s ease-in-out; }
 
 @keyframes char_17_animation {
-	0% { transform: translate(3vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(3vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_17 { animation: char_17_animation 1.6s ease-in-out; }
+#lettre_17 { animation: char_17_animation 1.2s ease-in-out; }
 
 @keyframes char_18_animation {
-	0% { transform: translate(4vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(4vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_18 { animation: char_18_animation 1.6s ease-in-out; }
+#lettre_18 { animation: char_18_animation 1.2s ease-in-out; }
 
 @keyframes char_19_animation {
-	0% { transform: translate(5vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(5vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_19 { animation: char_19_animation 1.6s ease-in-out; }
+#lettre_19 { animation: char_19_animation 1.2s ease-in-out; }
 
 @keyframes char_20_animation {
-	0% { transform: translate(6vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(6vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_20 { animation: char_20_animation 1.6s ease-in-out; }
+#lettre_20 { animation: char_20_animation 1.2s ease-in-out; }
 
 @keyframes char_21_animation {
-	0% { transform: translate(7vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(7vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_21 { animation: char_21_animation 1.6s ease-in-out; }
+#lettre_21 { animation: char_21_animation 1.2s ease-in-out; }
 
 @keyframes char_22_animation {
-	0% { transform: translate(8vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(8vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_22 { animation: char_22_animation 1.6s ease-in-out; }
+#lettre_22 { animation: char_22_animation 1.2s ease-in-out; }
 
 @keyframes char_23_animation {
-	0% { transform: translate(9vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(9vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_23 { animation: char_23_animation 1.6s ease-in-out; }
+#lettre_23 { animation: char_23_animation 1.2s ease-in-out; }
 
 @keyframes char_24_animation {
-	0% { transform: translate(10vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(10vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_24 { animation: char_24_animation 1.6s ease-in-out; }
+#lettre_24 { animation: char_24_animation 1.2s ease-in-out; }
 
 @keyframes char_25_animation {
-	0% { transform: translate(11vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(11vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_25 { animation: char_25_animation 1.6s ease-in-out; }
+#lettre_25 { animation: char_25_animation 1.2s ease-in-out; }
 
 @keyframes char_26_animation {
-	0% { transform: translate(12vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(12vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_26 { animation: char_26_animation 1.6s ease-in-out; }
+#lettre_26 { animation: char_26_animation 1.2s ease-in-out; }
 
 @keyframes char_27_animation {
-	0% { transform: translate(13vw, 5vw) rotate(-0.5turn); }
+	0% { transform: translate(13vw, 5vw) rotate(-1.5turn); }
 	100% { transform: none; }
 }
-#lettre_27 { animation: char_27_animation 1.6s ease-in-out; }
+#lettre_27 { animation: char_27_animation 1.2s ease-in-out; }
 
 @keyframes char_28_animation {
-	0% { transform: translate(14vw, -39vw) rotate(0.5turn); }
+	0% { transform: translate(14vw, -39vw) rotate(1.5turn); }
 	100% { transform: none; }
 }
-#lettre_28 { animation: char_28_animation 1.6s ease-in-out; }
+#lettre_28 { animation: char_28_animation 1.2s ease-in-out; }
 
 /* Barre de menu */
 @keyframes menuFadeIn {
@@ -346,10 +346,10 @@ li { list-style: inside disclosure-closed; }
 }
 #panel_1 .panel-title {
     font-family: Monospace;
-    font-size: 2.5vw;
+	font-size: 2.5vw;
     font-weight: bold;
     text-align: left;
-    animation: blinking 0.8s linear 4;
+	animation: blinking 1s linear 3;
 }
 #panel_1 .panel-text {
     font-family: Monospace;
