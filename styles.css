@@ -429,9 +429,9 @@ textarea {
 /** Contenu panneau 6 **/
 #panel_6 .column-header {
 	font-weight: bold;
-	text-align: center;
 	background: linear-gradient(to right, transparent, #c9e1f780, transparent, #c9e1f780, transparent);
 }
+#panel_6 .column-header p { text-align: center; }
 #panel_6 .row.reveal:nth-child(odd) { 
 	background-color: #c9e1f74a;
 	border-radius: 5px; 
