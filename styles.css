@@ -317,7 +317,6 @@ a.button:hover { background: linear-gradient(to bottom, #9f4400, #ca5500 60%,#ff
 	text-align: center;
 	line-height: 0.75em;
 	margin-top: 3vw;
-	animation: blinking 0.8s linear 4;
 }
 .panel-text, p, li, center a.button {
 	font-family: RobotoSlab;
@@ -347,9 +346,10 @@ li { list-style: inside disclosure-closed; }
 }
 #panel_1 .panel-title {
     font-family: Monospace;
-	font-size: 2.5vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: left;
+    animation: blinking 0.8s linear 4;
 }
 #panel_1 .panel-text {
     font-family: Monospace;
