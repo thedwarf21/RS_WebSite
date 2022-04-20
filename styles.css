@@ -224,6 +224,12 @@ body {
 	-ms-user-select: none;		/* Internet explorer depuis la version 10 et Edge */
 	user-select: none;			/* Propriété standard */
 }
+h2 {
+    text-indent: 10vw;
+    font-family: 'RobotoSlab';
+    font-weight: bold;
+    font-size: 1.5vw;
+}
 .fond {
     background: url('code.png') no-repeat;
     background-clip: border-box;
@@ -431,10 +437,17 @@ textarea {
 	font-weight: bold;
 	background: linear-gradient(to right, transparent, #c9e1f780, transparent, #c9e1f780, transparent);
 }
-#panel_6 .column-header p { text-align: center; }
+#panel_6 .column-header p {	text-align: center; }
 #panel_6 .row.reveal:nth-child(odd) { 
 	background-color: #c9e1f74a;
 	border-radius: 5px; 
+}
+
+/** Contenu panneau 9 **/
+div#panel_9 {
+	background: linear-gradient(0deg, rgb(134 187 233), #FFFEEE);
+	color: #06619a;
+	padding: 5vw;
 }
 
 /** Animations d'apparition du contenu des panneaux **/
